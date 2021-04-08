@@ -2,8 +2,8 @@ import axios from 'axios'
 
 export function request(config) {
   const instance = new axios.create({
-    //baseURL:'http://123.207.32.32:8000',
-    baseURL:'http://adi-v3.dev',
+    baseURL:'http://123.207.32.32:8000',
+    // baseURL:'http://adi-v3.dev',
     timeout:5000
   });
 
@@ -15,7 +15,7 @@ export function request(config) {
 
   })
 
-  // 相应拦截器
+  // 响应拦截器
   instance.interceptors.response.use(res => {
     // 拦截后需要将拦截下来处理成的结果返回
     return res.data
