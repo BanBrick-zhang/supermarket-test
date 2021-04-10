@@ -1,6 +1,6 @@
 <template>
-  <div class="goods-item">
-    <img src="goodsItem.show.img" alt="">
+  <div class="goods-item" @click="ItemClick">
+    <img src="goodsItem.show.img" alt="" @load="imageLoad">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span>
@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: '',
+    name: 'GoodsListItem',
     props:{
       goodsItem:{
         type:Object,
@@ -23,7 +23,15 @@
     data() {
       return {}
     },
-    components: {}
+    components: {},
+    methods: {
+      imageLoad(){
+        this.$bus.$emit('itemImageLoad')
+      },
+      ItemClick(){
+        this.$router.push('/detail' + this.goodsItem.Iid)
+      }
+    },
   }
 </script>
 

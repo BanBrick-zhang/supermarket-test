@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-      <router-view></router-view>
+       <keep-alive>  <!--组件离开时不销毁 -->
+        <router-view></router-view>
+      </keep-alive>
       <MainTabBar></MainTabBar>
     </div>
 </template>
