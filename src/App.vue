@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-       <keep-alive>  <!--组件离开时不销毁 -->
+      <keep-alive exclude="DetailData">  <!--组件离开时不销毁,排除detaildata路由界面-->
         <router-view></router-view>
       </keep-alive>
       <MainTabBar></MainTabBar>

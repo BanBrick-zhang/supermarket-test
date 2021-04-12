@@ -10,7 +10,7 @@
       <HomeFeature></HomeFeature>
       <TabControl @tabClick="tabClick" :titles="['流行','新款','精选']" class="tab-control-2" ref="tabControl2"></TabControl>
       <GoodsList :goods="showGoods"></GoodsList>
-      <ul>
+      <ul @click="ulClick">
         <li>商品列表</li>
         <li>商品列表</li>
         <li>商品列表</li>
@@ -188,6 +188,11 @@
       this.saveY = this.$refs.scroll.getscrollY()
     },
     methods: {
+      // 模拟点击ul转换到商品详情页
+      ulClick(){
+        this.$router.push('/detail')
+      },
+
       //事件监听
       tabClick(index){
         switch(index){

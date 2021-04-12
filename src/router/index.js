@@ -30,9 +30,10 @@ const routes = [
     component:Profile
   },
   {
-    path: '/detail:Iid',
+    path: '/detail:iid',
     component:Detail
   },
+  
 ]
 
 const router = new VueRouter({

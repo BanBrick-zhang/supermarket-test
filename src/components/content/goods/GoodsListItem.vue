@@ -29,7 +29,7 @@
         this.$bus.$emit('itemImageLoad')
       },
       ItemClick(){
-        this.$router.push('/detail' + this.goodsItem.Iid)
+        this.$router.push('/detail' + this.goodsItem.iid)
       }
     },
   }
